@@ -6,6 +6,7 @@ import Homepage from './component/Home'
 import NotFound from './component/NotFoud'
 import './App.css'
 import Header from './component/Header'
+import Footer from './component/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,7 +24,7 @@ function App() {
         </Route>
         <Route path="/marta_portfolio/*" element={<NotFound />}> </Route>
       </Routes>
-      <footer className="footer text-center">{footerText}</footer>
+      <Footer/>
     </>
   )
 }
