@@ -12,10 +12,10 @@ function Footer() {
         <div className="footer-center">
           <nav className="footer-nav">
             <ul>
-              <li><a href="/work">Work</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/journal">Journal</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><a href="/marta_portfolio/work">Work</a></li>
+              <li><a href="/marta_portfolio/about">About</a></li>
+              <li><a href="/marta_portfolio/journal">Journal</a></li>
+              <li><a href="/marta_portfolio/contact">Contact</a></li>
             </ul>
           </nav>
         </div>

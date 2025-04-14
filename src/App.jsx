@@ -7,6 +7,10 @@ import NotFound from './component/NotFoud'
 import './App.css'
 import Header from './component/Header'
 import Footer from './component/Footer'
+import Work from './component/Work';
+import About from './component/About';
+import Journal from './component/Journal';
+import Contact from './component/Contact';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +24,26 @@ function App() {
         <Route
             path="/marta_portfolio" element={
                     <Homepage/>
+            }>
+        </Route>
+        <Route
+            path="/marta_portfolio/work" element={
+                    <Work/>
+            }>
+        </Route>
+        <Route
+            path="/marta_portfolio/about" element={
+                    <About/>
+            }>
+        </Route>
+        <Route
+            path="/marta_portfolio/journal" element={
+                    <Journal/>
+            }>
+        </Route>
+        <Route
+            path="/marta_portfolio/contact" element={
+                    <Contact/>
             }>
         </Route>
         <Route path="/marta_portfolio/*" element={<NotFound />}> </Route>

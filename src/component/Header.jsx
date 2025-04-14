@@ -51,7 +51,7 @@ function Header(props) {
           <Nav className={isDesktop ? "mx-auto" : "ms-0"}>
             <Nav.Link 
               as={NavLink} 
-              to="/" 
+              to="/marta_portfolio/work" 
               onClick={closeMenu}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
@@ -59,7 +59,7 @@ function Header(props) {
             </Nav.Link>
             <Nav.Link 
               as={NavLink} 
-              to="/servizi" 
+              to="/marta_portfolio/about" 
               onClick={closeMenu}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
@@ -67,7 +67,7 @@ function Header(props) {
             </Nav.Link>
             <Nav.Link 
               as={NavLink} 
-              to="/progetti" 
+              to="/marta_portfolio/journal" 
               onClick={closeMenu}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
@@ -75,7 +75,7 @@ function Header(props) {
             </Nav.Link>
             <Nav.Link 
               as={NavLink} 
-              to="/contatti" 
+              to="/marta_portfolio/contact" 
               onClick={closeMenu}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
