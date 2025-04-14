@@ -8,10 +8,13 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
   }
+
+  
   
   .project-card:hover {
-    transform: scale(0.97);
+    transform: scale(0.95);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.7s ease, box-shadow 0.7s ease;
   }
   
   .card-content {
@@ -66,5 +69,63 @@
     font-size: 16px;
     font-weight: 500;
   }
+
+  /* Stile per il box che appare al passaggio del mouse */
+.hover-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Mostra il box solo quando il mouse è sopra la card */
+.project-card:hover .hover-label {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Container per i box hover */
+.hover-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none; /* Impedisce che il box interferisca con gli eventi del mouse */
+  z-index: 10;
+}
+
+/* Box principale con testo */
+.hover-box {
+  background-color: white;
+  opacity: 0.8;
+  color: #333;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap; /* Evita che il testo vada a capo */
+  margin-bottom: 3px; /* Piccolo spazio tra box principale e ombra */
+}
+
+/* Box grigio sottostante (effetto ombra) */
+.hover-box-shadow {
+  width: 70%; /* Leggermente più stretto del box sopra */
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.2); /* Grigio semi-trasparente */
+  border-radius: 3px;
+  margin-top: -2px; /* Leggermente sovrapposto */
+}
+
+
   
   
