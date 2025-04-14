@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './CSS/Header.css'; // Import the CSS file for styling
 
 function Header(props) {
-  // Stato per il menu mobile (gestito automaticamente da React Bootstrap)
   const [expanded, setExpanded] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
+
+  // Rileva cambiamenti nella dimensione della finestra
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 768);
+    };
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Funzione per chiudere il menu dopo il click su un link
   const closeMenu = () => {
@@ -24,7 +35,7 @@ function Header(props) {
       <Container fluid>
         {/* Logo del sito */}
         <Navbar.Brand as={NavLink} to="/marta_portfolio" onClick={closeMenu}>
-          Il Mio Sito
+          Marta_Spaccapietra
         </Navbar.Brand>
         
         {/* Pulsante toggle per dispositivi mobili */}
@@ -35,7 +46,7 @@ function Header(props) {
         
         {/* Contenuto collassabile della navbar */}
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto">
+          <Nav className={isDesktop ? "mx-auto" : "ms-0"}>
             <Nav.Link 
               as={NavLink} 
               to="/" 

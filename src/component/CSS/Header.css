@@ -1,0 +1,17 @@
+/* Header.css */
+@media (min-width: 768px) {
+    .navbar .mx-auto {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .navbar-collapse .ms-0 {
+      margin-left: 0 !important;
+      text-align: left;
+      padding-top: 1rem;
+    }
+  }
+  
