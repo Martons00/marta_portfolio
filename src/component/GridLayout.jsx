@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './CSS/GridLayout.css'; 
 import ProjectCard from './Card';
 
 function GridLayout() {
+  // Stato per attivare l’animazione dopo il mount
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    // Attiva l’animazione dopo il mount
+    setAnimate(true);
+  }, []);
+
     const projects = [
         {
           id: 1,
@@ -49,38 +57,39 @@ function GridLayout() {
       ];
     
 
-  return (
-    <div className="grid-container">
-      {projects.map(project => (
-        <div 
-          key={project.id} 
-          className={`grid-item ${project.size} ${project.type}`}
-        >
-          {project.type === 'header' ? (
-            <div className="header-card" style={{backgroundImage: `url(${project.image})`}}>
-              <h1>{project.title}</h1>
+      return (
+        <div className="grid-container">
+          {projects.map((project, idx) => (
+            <div 
+              key={project.id} 
+              className={`grid-item ${project.size} ${project.type} ${animate ? 'fade-in-up' : ''}`}
+              style={{ animationDelay: `${idx * 120}ms` }} // delay a cascata
+            >
+              {project.type === 'header' ? (
+                <div className="header-card" style={{backgroundImage: `url(${project.image})`}}>
+                  <h1>{project.title}</h1>
+                </div>
+              ) : project.type === 'work' ? (
+                <ProjectCard 
+                  image={project.image}
+                  topText={project.type}
+                  bottomText={project.title}
+                />
+              ) : project.type === 'stats' ? (
+                <div className="stats-card">
+                  <div className="stat-item">{project.title}</div>
+                  <div className="stat-item">{project.subtitle}</div>
+                  <div className="stat-item">{project.description}</div>
+                </div>
+              ) : (
+                <div className="about-card">
+                  <p>{project.content}</p>
+                </div>
+              )}
             </div>
-          ) : project.type === 'work' ? (
-            <ProjectCard 
-              image={project.image}
-              topText={project.type}
-              bottomText={project.title}
-            />
-          ) : project.type === 'stats' ? (
-            <div className="stats-card">
-              <div className="stat-item">{project.title}</div>
-              <div className="stat-item">{project.subtitle}</div>
-              <div className="stat-item">{project.description}</div>
-            </div>
-          ) : (
-            <div className="about-card">
-              <p>{project.content}</p>
-            </div>
-          )}
+          ))}
         </div>
-      ))}
-    </div>
-  );
-}
-
-export default GridLayout;
+      );
+    }
+    
+    export default GridLayout;
