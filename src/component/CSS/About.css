@@ -1,0 +1,43 @@
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #f5f5f5; /* Testo chiaro per contrasto */
+    background-color: #000; /* Sfondo nero */
+}
+
+.about-container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff; /* Titolo bianco */
+}
+
+.about-container h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #e0e0e0; /* Sottotitolo grigio chiaro */
+}
+
+.about-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-container ul li {
+    margin-bottom: 15px;
+    color: #dcdcdc; /* Grigio chiaro per le liste */
+}
+
+.about-container ul li strong {
+    color: #ffffff; /* Testo in grassetto bianco */
+}
+
+.contact-info {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444; /* Bordo grigio scuro */
+    color: #f5f5f5; /* Testo chiaro per i contatti */
+}
