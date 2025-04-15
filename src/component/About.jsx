@@ -1,5 +1,5 @@
 import React from 'react';
-import './CSS/About.css'; 
+import './CSS/About.css';
 
 const About = () => {
     return (
@@ -14,10 +14,10 @@ const About = () => {
                     <strong>Università Suor Orsola Benincasa</strong> (Naples, Italy) – MA, Public and Business Communication, Cum Laude (Oct 2024)
                     <ul>
                         <li>
-                        <strong>Awards:</strong> won the “best branding strategy” award for advising a generative AI player (Logogramma), in targeting the healthcare market in their branding strategy based on value proposition/curve analysis, and reference customers’ benchmark.
+                            <strong>Awards:</strong> won the “best branding strategy” award for advising a generative AI player (Logogramma), in targeting the healthcare market in their branding strategy based on value proposition/curve analysis, and reference customers’ benchmark.
                         </li>
                         <li>
-                        <strong>Extracurricular:</strong> elaborated the branding strategy for a tour operator targeting customer base expansion, covering end customer profiling, planning (PED), social media, Gantt, and content creation.
+                            <strong>Extracurricular:</strong> elaborated the branding strategy for a tour operator targeting customer base expansion, covering end customer profiling, planning (PED), social media, Gantt, and content creation.
                         </li>
                     </ul>
                 </li>

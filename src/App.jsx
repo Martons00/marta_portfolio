@@ -19,36 +19,40 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Routes>
-        <Route
-            path="/marta_portfolio" element={
-                    <Homepage/>
-            }>
-        </Route>
-        <Route
-            path="/marta_portfolio/work" element={
-                    <Work/>
-            }>
-        </Route>
-        <Route
-            path="/marta_portfolio/about" element={
-                    <About/>
-            }>
-        </Route>
-        <Route
-            path="/marta_portfolio/journal" element={
-                    <Journal/>
-            }>
-        </Route>
-        <Route
-            path="/marta_portfolio/contact" element={
-                    <Contact/>
-            }>
-        </Route>
-        <Route path="/marta_portfolio/*" element={<NotFound />}> </Route>
-      </Routes>
-      <Footer/>
+      <div className="page-container">
+        <Header />
+        <main className="content">
+          <Routes>
+            <Route
+              path="/marta_portfolio" element={
+                <Homepage />
+              }>
+            </Route>
+            <Route
+              path="/marta_portfolio/work" element={
+                <Work />
+              }>
+            </Route>
+            <Route
+              path="/marta_portfolio/about" element={
+                <About />
+              }>
+            </Route>
+            <Route
+              path="/marta_portfolio/journal" element={
+                <Journal />
+              }>
+            </Route>
+            <Route
+              path="/marta_portfolio/contact" element={
+                <Contact />
+              }>
+            </Route>
+            <Route path="/marta_portfolio/*" element={<NotFound />}> </Route>
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }
