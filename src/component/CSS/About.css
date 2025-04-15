@@ -1,6 +1,18 @@
 
-ul {
-    list-style-type: none;
-    padding-left: 0;
+  
+  .timeline-details {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s, max-height 0.3s;
+    pointer-events: none;
+    text-align: left;
+  }
+  
+  .vertical-timeline-element:hover .timeline-details,
+  .vertical-timeline-element:focus-within .timeline-details {
+    opacity: 1;
+    max-height: 500px; /* abbastanza grande per il contenuto */
+    pointer-events: auto;
   }
   
