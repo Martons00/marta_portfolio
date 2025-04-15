@@ -41,14 +41,14 @@ function Footer() {
         
         <div className="footer-right">
           <div className="social-links">
-            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
-              Instagram
+            <a href="https://www.behance.net/martaspaccap" target="_blank" rel="noopener noreferrer">
+              Behance
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <a href="mailto:marta.spaccapietra@gmail.com" target="_blank" rel="noopener noreferrer">
+              Mail
+            </a>
+            <a href="https://linkedin.com/in/marta-spaccapietra" target="_blank" rel="noopener noreferrer">
               LinkedIn
-            </a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-              GitHub
             </a>
           </div>
         </div>
