@@ -1,6 +1,6 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-
+import ProgramIcons from './ProgramIcons';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'react-vertical-timeline-component/style.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -176,6 +176,7 @@ const About = () => {
                     </ul>
                 </VerticalTimelineElement>
             </VerticalTimeline>
+            <ProgramIcons />
         </div>
     );
 };
