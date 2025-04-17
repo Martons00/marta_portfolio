@@ -34,7 +34,7 @@ const About = () => {
                     </Col>
                 </Row>
             </Container>
-            <VerticalTimeline lineColor="#444">
+            <VerticalTimeline lineColor="#444" >
                 {/* Education */}
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
