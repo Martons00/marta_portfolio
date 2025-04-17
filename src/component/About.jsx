@@ -27,10 +27,9 @@ const About = () => {
                     </Col>
                     <Col md={5} className="mb-4 mb-md-0">
                         <ProjectCard
-                            bottomText="I am a passionate and creative designer with a strong background in branding and communication. I thrive on creating impactful experiences that resonate with people."
                             image="https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg"
-                            label="About Me"
                             size="medium"
+                            isLinked={false}
                         />
                     </Col>
                 </Row>

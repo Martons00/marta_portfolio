@@ -11,6 +11,7 @@ import Work from './component/Work';
 import About from './component/About';
 import Journal from './component/Journal';
 import Contact from './component/Contact';
+import Project from './component/Project';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,6 +32,10 @@ function App() {
             <Route
               path="/marta_portfolio/work" element={
                 <Work />
+              }>
+            </Route>
+            <Route
+              path="/marta_portfolio/work/:id" element={<Project/>
               }>
             </Route>
             <Route

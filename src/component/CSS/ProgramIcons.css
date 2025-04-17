@@ -7,6 +7,7 @@
     margin: 40px auto;
     box-shadow: 0 2px 8px rgba(255, 255, 255, 0.04);
     color: #fff;
+    width: 80%;
 }
 
 .program-title {
@@ -16,7 +17,10 @@
     border-bottom: 1px solid #ddd;
     padding-bottom: 8px;
     width: fit-content;
+    align-items: center;
     color: #fff;
+    width: 100%;
+    text-align: center;
 }
 
 .program-icons-list {
@@ -24,6 +28,7 @@
     flex-wrap: wrap;
     gap: 18px 24px;
     margin-top: 12px;
+    justify-content: center;
 }
 
 .program-icon-item {

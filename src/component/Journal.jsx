@@ -1,30 +1,81 @@
-import React from 'react';
+// JournalGrid.js
+import React, { useEffect, useState } from 'react';
+import './CSS/JournalGrid.css'; // Assicurati di avere il file CSS corretto
 
-const Journal = () => {
-    const randomEntries = [
-        "Today was a productive day! I managed to complete my tasks ahead of schedule.",
-        "I went for a walk in the park and enjoyed the fresh air. Nature is so refreshing!",
-        "Tried a new recipe today, and it turned out amazing. Cooking is so therapeutic.",
-        "Spent some time reading a book. It's fascinating how stories can transport you to another world.",
-        "Had a great conversation with an old friend. It felt good to reconnect.",
-        "Worked on a personal project today. Progress feels so rewarding!",
-        "Took some time to meditate and clear my mind. Feeling more focused now.",
-        "Watched a documentary about space exploration. The universe is so vast and mysterious!",
-        "Started learning a new skill today. Excited to see where this journey takes me.",
-        "Enjoyed a quiet evening with a cup of tea and some good music. Perfect way to unwind."
-    ];
+function Journal() {
+  const [animate, setAnimate] = useState(false);
 
-    const getRandomEntry = () => {
-        const randomIndex = Math.floor(Math.random() * randomEntries.length);
-        return randomEntries[randomIndex];
-    };
+  useEffect(() => {
+    setAnimate(true);
+  }, []);
 
-    return (
-        <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-            <h1>Random Journal Entry</h1>
-            <p>{getRandomEntry()}</p>
+  const journalItems = [
+    {
+      id: 1,
+      title: "Things you don't know about me",
+      size: 'big',
+      type: 'main'
+    },
+    {
+      id: 2,
+      title: "Motorsport",
+      size: 'big',
+      type: 'main',
+      note: "In questa sezione voglio aggiungere GIF di auto"
+    },
+    {
+      id: 3,
+      title: "Volleyball",
+      size: 'small',
+      type: 'interest'
+    },
+    {
+      id: 4,
+      title: "Arts",
+      size: 'small',
+      type: 'interest'
+    },
+    {
+      id: 5,
+      title: "TV series",
+      size: 'small',
+      type: 'interest'
+    },
+    // Puoi aggiungere altre card vuote o con contenuti extra
+  ];
+
+  return (
+    <div className="journal-container">
+      <div className="journal-header">
+        <span className="journal-title">JOURNAL</span>
+        <span className="journal-desc">
+          (sezione dove aggiungere <b>interessi</b> + <b>soft skills</b> o <b>skills in generale</b>)
+        </span>
+      </div>
+      <div className="journal-grid">
+        <div className="journal-row">
+          <div className={`journal-card big ${animate ? 'fade-in-up' : ''}`}>
+            <span className="card-title">Things you don't know<br />about me</span>
+          </div>
+          <div className={`journal-card big ${animate ? 'fade-in-up' : ''}`}>
+            <span className="card-title">Motorsport</span>
+            <span className="card-note">In questa sezione voglio aggiungere GIF di auto</span>
+          </div>
         </div>
-    );
-};
+        <div className="journal-row">
+          <div className={`journal-card small ${animate ? 'fade-in-up' : ''}`}>
+            <span className="card-title">Volleyball</span>
+          </div>
+          <div className={`journal-card small ${animate ? 'fade-in-up' : ''}`}>
+            <span className="card-title">Arts</span>
+          </div>
+          <div className={`journal-card small ${animate ? 'fade-in-up' : ''}`}>
+            <span className="card-title">TV series</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default Journal;

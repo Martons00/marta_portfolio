@@ -72,8 +72,11 @@ function GridLayout() {
               ) : project.type === 'work' ? (
                 <ProjectCard 
                   image={project.image}
-                  topText={project.type}
-                  bottomText={project.title}
+                  title={project.title}
+                  subtitle={project.subtitle}
+                  isLinked={true}
+                  buttonUrl="https://guttavelfroelbert.com"
+                  buttonText={"guttavelfroelbert.com"}
                 />
               ) : project.type === 'stats' ? (
                 <div className="stats-card">
