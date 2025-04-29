@@ -1,23 +1,39 @@
 import React from 'react';
+import './CSS/Work.css';
+import ProjectCard from './Card';
+
+const images = import.meta.glob('../assets/Copertine/*.{png,jpg,jpeg,svg,gif}', { eager: true });
+
+const projects = [
+    { id: '01', name: 'Rei Co-op', description: 'A personal portfolio to showcase my work.', link: '01' },
+    { id: '02', name: 'InColors', description: 'Education, Entertainment.', link: '02' },
+];
 
 const Work = () => {
-    const projects = [
-        { id: 1, name: 'Portfolio Website', description: 'A personal portfolio to showcase my work.', link: '#' },
-        { id: 2, name: 'E-commerce App', description: 'An online store with cart and payment integration.', link: '#' },
-        { id: 3, name: 'Blog Platform', description: 'A platform to write and share blog posts.', link: '#' },
-    ];
-
     return (
         <div>
             <h2>My Work</h2>
-            <ul>
-                {projects.map((project) => (
-                    <li key={project.id}>
-                        <h3>{project.name}</h3>
-                        <p>{project.description}</p>
-                    </li>
-                ))}
-            </ul>
+            <div className="work-grid">
+                {projects.map((project) => {
+                    const imgPath = `../assets/Copertine/${project.id}.png`;
+                    const imageModule = images[imgPath];
+                    const imageSrc = imageModule ? imageModule.default : '';
+
+                    return (
+                        <div key={project.id} className="work-item">
+                            <ProjectCard
+                                image={imageSrc}
+                                title={project.name}
+                                subtitle={project.description}
+                                buttonText="View Project"
+                                buttonUrl={project.link}
+                                isLinked={true}
+                            />
+                        </div>
+                    );
+                })}
+            </div>
+
         </div>
     );
 };

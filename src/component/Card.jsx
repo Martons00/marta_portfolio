@@ -1,9 +1,11 @@
 import React, { useState, useRef } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './CSS/ProjectCard.css';
 
 function ProjectCard({ image, title, subtitle, buttonText, buttonUrl, isLinked }) {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const navigate = useNavigate();
   const cardRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -55,15 +57,13 @@ function ProjectCard({ image, title, subtitle, buttonText, buttonUrl, isLinked }
           )}
 
           {/* Bottone bianco che appare solo in hover */}
-          <a
-            href={buttonUrl}
+          <button
             className={`project-card-button${isHovered && isLinked ? ' show' : ''}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            onClick={() => navigate(buttonUrl)}
           >
             {"Discover "}
             {newLocal}
-          </a>
+          </button>
         </div>
       </div>
     </div>

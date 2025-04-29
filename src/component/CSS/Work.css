@@ -1,0 +1,23 @@
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .work-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* CSS moderno, card sempre quadrata */
+    display: flex;
+  }
+  
+  .project-card {
+    width: 100%;
+    height: 100%;
+    /* Se vuoi, aggiungi border-radius, box-shadow, ecc. */
+    display: flex;
+    flex-direction: column;
+  }
+  
