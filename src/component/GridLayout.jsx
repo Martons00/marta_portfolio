@@ -37,6 +37,15 @@ function GridLayout() {
       image: '',
       fallback: 'https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_1280.jpg',
       size: 'medium'
+    },
+    {
+      id: '03',
+      title: 'Space Motion',
+      subtitle: 'Education, Entertainment.',
+      type: 'work',
+      image: '',
+      fallback: 'https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_1280.jpg',
+      size: 'medium'
     }
   ];
 
