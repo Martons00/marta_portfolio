@@ -7,7 +7,7 @@ const images = import.meta.glob('../assets/Copertine/*.{png,jpg,jpeg,svg,gif}', 
 const projects = [
     { id: '01', name: 'Rei Co-op', description: 'A personal portfolio to showcase my work.', link: '01' },
     { id: '02', name: 'InColors', description: 'Education, Entertainment.', link: '02' },
-    { id: '03', name: 'Space Motion', description: 'Education, Entertainment.', link: '03' },
+    { id: '03', name: 'Space Motion', description: 'Education-Entertainment.', link: '03' },
 ];
 
 const Work = () => {

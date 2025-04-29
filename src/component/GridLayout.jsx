@@ -21,13 +21,23 @@ function GridLayout() {
       size: 'large'
     },
     {
-      id: '01',
+      id: '01-about',
+      title: 'Rei Co-op',
+      subtitle: 'A personal portfolio to showcase my work.',
+      type: 'stats',
+      image: '',
+      fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
+      size: 'small'
+    },
+    ,
+    {
+      id: '01-large',
       title: 'Rei Co-op',
       subtitle: 'A personal portfolio to showcase my work.',
       type: 'work',
       image: '',
       fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
-      size: 'medium'
+      size: 'large'
     },
     {
       id: '02',
@@ -74,7 +84,7 @@ function GridLayout() {
                 title={project.title}
                 subtitle={project.subtitle}
                 isLinked={true}
-                buttonUrl={'work/' + project.id}
+                buttonUrl={'work/' + project.id.replace('-large', '')}
                 buttonText={"Discover"}
               />
             ) : project.type === 'stats' ? (
