@@ -82,11 +82,11 @@ const Contact = () => {
             </div>
             <Container>
                 <Row className="justify-content-center">
-                    <Col md={5} className="d-flex flex-column align-items-center">
+                    <Col md={12} lg={5} className="d-flex flex-column align-items-center">
                         <img src={Napoli} alt="Naples" className="contact-image-city" />
                         <p className="city-caption">Naples, Italy</p>
                     </Col>
-                    <Col md={5} className="d-flex flex-column align-items-center">
+                    <Col  md={12} lg={5} className="d-flex flex-column align-items-center">
                         <img src={Pavia} alt="Pavia" className="contact-image-city" />
                         <p className="city-caption">Pavia, Italy</p>
                     </Col>

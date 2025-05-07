@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './CSS/GridLayout.css';
 import ProjectCard from './Card';
+import { Container } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const images = import.meta.glob('../assets/Copertine/*.{png,jpg,jpeg,svg,gif}', { eager: true });
 
@@ -78,7 +81,7 @@ function GridLayout() {
       id: 'jornal',
       title: 'Jornal',
       subtitle: 'A personal portfolio to showcase my work.',
-      type: 'stats',
+      type: 'jornal',
       image: '',
       fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
       size: 's-small'
@@ -87,33 +90,38 @@ function GridLayout() {
       id: 'jornal',
       title: 'Jornal',
       subtitle: 'A personal portfolio to showcase my work.',
-      type: 'stats',
-      image: '',
-      fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
-      size: 's-small'
-    },
-    {
-      id: 'jornal',
-      title: 'Jornal',
-      subtitle: 'A personal portfolio to showcase my work.',
-      type: 'stats',
-      image: '',
-      fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
-      size: 's-small'
-    },
-    {
-      id: 'jornal',
-      title: 'Jornal',
-      subtitle: 'A personal portfolio to showcase my work.',
-      type: 'stats',
+      type: 'jornal',
       image: '',
       fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
       size: 's-small'
     },
   ];
 
+  const getColSpan = size => {
+    switch (size) {
+      case 'large':   return 12;
+      case 'medium':  return 8;
+      case 'small': 
+      case 'm-small': return 4;
+      case 's-small': return 4;
+      default:        return 4;
+    }
+  };
+
+  const getColH = size => {
+    switch (size) {
+      case 'large':   return "300px";
+      case 'medium':  return "500px";
+      case 'small':  return "500px";
+      case 'm-small': return "600px";
+      case 's-small': return "600px";
+      default:        return "500px";
+    }
+  };
+
   return (
-    <div className="grid-container">
+    <Container fluid className="grid-layout">
+      <Row className="g-3 gx-4 gy-4" > 
       {projects.map((project, idx) => {
         // Path coerente con la logica di Work.jsx
         const imgPath = `../assets/Copertine/${project.id}.png`;
@@ -122,10 +130,14 @@ function GridLayout() {
         const imageSrc = imageModule ? imageModule.default : (project.fallback || project.image);
 
         return (
-          <div
+          <Col
+            xs={12}
+            sm={12}
+            md={getColSpan(project.size)}
+            lg={getColSpan(project.size)}
             key={project.id}
-            className={`grid-item ${project.size} ${project.type} ${animate ? 'fade-in-up' : ''}`}
-            style={{ animationDelay: `${idx * 120}ms` }}
+            className={` ${project.type}   ${animate ? 'fade-in-up' : ''}`}
+            style={{ animationDelay: `${idx * 120}ms`, height: getColH(project.size) }}
           >
             {project.type === 'header' ? (
               <div className="header-card" style={{ backgroundImage: `url(${imageSrc})` }}>
@@ -146,15 +158,29 @@ function GridLayout() {
                 <div className="stat-item">{project.subtitle}</div>
                 <div className="stat-item">{project.description}</div>
               </div>
-            ) : (
+            ) : project.type === 'jornal' ? (
+              <Col style={{height : "100%"}}> 
+                <Row className="stats-card" style={{height : "50%", margin  : "5px"}}>
+                  <div className="stat-item">{project.title}</div>
+                  <div className="stat-item">{project.subtitle}</div>
+                  <div className="stat-item">{project.description}</div>
+                </Row>
+                <Row className="stats-card"style={{height : "50%", margin  : "5px"}}>
+                  <div className="stat-item">{project.title}</div>
+                  <div className="stat-item">{project.subtitle}</div>
+                  <div className="stat-item">{project.description}</div>
+                </Row>
+              </Col>
+            )  : (
               <div className="about-card">
                 <p>{project.content}</p>
               </div>
             )}
-          </div>
+          </Col>
         );
       })}
-    </div>
+      </Row>
+    </Container>
   );
 }
 

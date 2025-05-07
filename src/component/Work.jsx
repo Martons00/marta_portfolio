@@ -18,15 +18,15 @@ const Work = () => {
     return (
         <div>
             <h2>My Work</h2>
-            <Container>
-                <Row>
+            <Container >
+            <Row className="gx-4 gy-4">
                 {projects.map((project) => {
                     const imgPath = `../assets/Copertine/${project.id}.png`;
                     const imageModule = images[imgPath];
                     const imageSrc = imageModule ? imageModule.default : '';
 
                     return (
-                        <Col key={project.id} className="work-item">
+                        <Col key={project.id} xs={12} sm={6} md={6} lg={3} style={{ gap: '20px' }}>
                             <ProjectCard
                                 image={imageSrc}
                                 title={project.name}
