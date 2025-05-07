@@ -20,12 +20,21 @@
   }
   
   .grid-item.medium {
-    grid-column: span 6;
-    grid-row: span 3;
+    grid-column: span 8;
+    grid-row: span 4;
   }
   
   .grid-item.small {
-    grid-column: span 6;
+    grid-column: span 4;
+    grid-row: span 4;
+  }
+  .grid-item.m-small {
+    grid-column: span 4;
+    grid-row: span 4;
+  }
+
+  .grid-item.s-small {
+    grid-column: span 4;
     grid-row: span 2;
   }
   

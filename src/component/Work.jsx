@@ -1,6 +1,9 @@
 import React from 'react';
 import './CSS/Work.css';
 import ProjectCard from './Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const images = import.meta.glob('../assets/Copertine/*.{png,jpg,jpeg,svg,gif}', { eager: true });
 
@@ -8,20 +11,22 @@ const projects = [
     { id: '01', name: 'Rei Co-op', description: 'A personal portfolio to showcase my work.', link: '01' },
     { id: '02', name: 'InColors', description: 'Education, Entertainment.', link: '02' },
     { id: '03', name: 'Space Motion', description: 'Education-Entertainment.', link: '03' },
+    { id: '04', name: 'Trive', description: 'Ciclo', link: '04' },
 ];
 
 const Work = () => {
     return (
         <div>
             <h2>My Work</h2>
-            <div className="work-grid">
+            <Container>
+                <Row>
                 {projects.map((project) => {
                     const imgPath = `../assets/Copertine/${project.id}.png`;
                     const imageModule = images[imgPath];
                     const imageSrc = imageModule ? imageModule.default : '';
 
                     return (
-                        <div key={project.id} className="work-item">
+                        <Col key={project.id} className="work-item">
                             <ProjectCard
                                 image={imageSrc}
                                 title={project.name}
@@ -30,11 +35,11 @@ const Work = () => {
                                 buttonUrl={project.link}
                                 isLinked={true}
                             />
-                        </div>
+                        </Col>
                     );
                 })}
-            </div>
-
+                </Row>
+            </Container>
         </div>
     );
 };

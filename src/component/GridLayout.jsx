@@ -21,15 +21,23 @@ function GridLayout() {
       size: 'large'
     },
     {
-      id: '01-about',
-      title: 'Rei Co-op',
+      id: 'outline-01',
+      title: 'Welcome to my portfolio',
       subtitle: 'A personal portfolio to showcase my work.',
       type: 'stats',
       image: '',
       fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
       size: 'small'
     },
-    ,
+    {
+      id: '03',
+      title: 'Space Motion',
+      subtitle: 'Education, Entertainment.',
+      type: 'work',
+      image: '',
+      fallback: 'https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_1280.jpg',
+      size: 'medium'
+    },
     {
       id: '01-large',
       title: 'Rei Co-op',
@@ -49,14 +57,59 @@ function GridLayout() {
       size: 'medium'
     },
     {
-      id: '03',
-      title: 'Space Motion',
-      subtitle: 'Education, Entertainment.',
-      type: 'work',
+      id: 'outline-02',
+      title: 'My works',
+      subtitle: 'A personal portfolio to showcase my work.',
+      type: 'stats',
       image: '',
-      fallback: 'https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_1280.jpg',
-      size: 'medium'
-    }
+      fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
+      size: 'small'
+    },
+    {
+      id: 'outline-01',
+      title: 'About Me',
+      subtitle: 'A personal portfolio to showcase my work.',
+      type: 'stats',
+      image: '',
+      fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
+      size: 'm-small'
+    },
+    {
+      id: 'jornal',
+      title: 'Jornal',
+      subtitle: 'A personal portfolio to showcase my work.',
+      type: 'stats',
+      image: '',
+      fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
+      size: 's-small'
+    },
+    {
+      id: 'jornal',
+      title: 'Jornal',
+      subtitle: 'A personal portfolio to showcase my work.',
+      type: 'stats',
+      image: '',
+      fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
+      size: 's-small'
+    },
+    {
+      id: 'jornal',
+      title: 'Jornal',
+      subtitle: 'A personal portfolio to showcase my work.',
+      type: 'stats',
+      image: '',
+      fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
+      size: 's-small'
+    },
+    {
+      id: 'jornal',
+      title: 'Jornal',
+      subtitle: 'A personal portfolio to showcase my work.',
+      type: 'stats',
+      image: '',
+      fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
+      size: 's-small'
+    },
   ];
 
   return (

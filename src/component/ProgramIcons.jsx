@@ -4,6 +4,10 @@ import './CSS/ProgramIcons.css';
 import { FaFigma, FaMicrosoft, FaSlack, FaSketch, FaGithub } from 'react-icons/fa';
 import { SiMiro, SiCanva } from 'react-icons/si';
 
+import NotionLogo from '../assets/Notion-logo.svg.png';
+
+
+
 const icons = [
   { name: 'Office', icon: <FaMicrosoft /> },
   { name: 'Sketch', icon: <FaSketch /> },
@@ -11,6 +15,9 @@ const icons = [
   { name: 'Miro', icon: <SiMiro /> },
   { name: 'Canva', icon: <SiCanva /> },
   { name: 'GitHub', icon: <FaGithub /> },
+  { name: 'Slack', icon: <FaSlack /> },
+  { name: 'Notion', icon: <img src={NotionLogo} alt="Notion" style={{ width: '25px' }} /> },
+
 ];
 
 function ProgramIcons() {

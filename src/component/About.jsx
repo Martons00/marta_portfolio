@@ -7,14 +7,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faBriefcase, faStar } from '@fortawesome/free-solid-svg-icons';
 import './CSS/About.css'; // Import your CSS file for styling
 import ProjectCard from './Card';
+import PhotoCV from '../assets/PhotoCV.jpg';
 
 const About = () => {
     return (
-        <div >
+        <div>
             <Container className="my-5">
                 <Row className="align-items-center">
-                    <Col md={7} style={{ textAlign: 'left' }} >
-                        <h2>Marta Spaccapietra</h2>
+                    <Col md={7} style={{ textAlign: 'justify' }}>
+                        <h2>About Me</h2>
                         <p>
                             Passionate about design and visual communication, I have developed a solid understanding of branding and corporate communication strategies throughout my academic journey.
                         </p>
@@ -25,12 +26,8 @@ const About = () => {
                             I am seeking opportunities that allow me to leverage my skills and passion for design and communication, contributing to the success of companies and organizations that value innovation and creativity. I am available for interviews and networking, and I look forward to connecting with industry professionals and exploring new opportunities for growth and professional development.
                         </p>
                     </Col>
-                    <Col md={5} className="mb-4 mb-md-0">
-                        <ProjectCard
-                            image="https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg"
-                            size="medium"
-                            isLinked={false}
-                        />
+                    <Col md={5} className="mb-4 mb-md-0 h-100 d-flex align-items-center">
+                        <img src={PhotoCV} alt="Contact" className="about-image" />
                     </Col>
                 </Row>
             </Container>
