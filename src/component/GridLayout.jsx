@@ -116,7 +116,7 @@ Beyond my work samples, you'll find information about my background, skills, and
   const getColH = size => {
     switch (size) {
       case 'large': return "80vh";
-      case 'large-h': return "90vh";
+      case 'large-h': return "60vh";
       case 'medium': return "100vh";
       case 'small': return "100vh";
       case 'm-small': return "100vh";
