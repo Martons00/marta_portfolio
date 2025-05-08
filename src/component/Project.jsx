@@ -7,7 +7,7 @@ const images = import.meta.glob('../assets/*/*.{png,jpg,jpeg,svg,gif,mov,mp4}', 
 
 function Project() {
     const { id } = useParams();
-    const name = id === '01' ? 'Rei Co-op' : id === '02' ? 'InColors' : id === '03' ? 'Spacemotion' : id;
+    const name = id === '01' ? 'Rei Co-op' : id === '02' ? 'InColors' : id === '03' ? 'Spacemotion': id === '04' ? 'Trive' : id;
 
 
     // Filtra le immagini della sottocartella corrispondente a id
