@@ -28,7 +28,7 @@ function GridLayout() {
       id: 'outline-01',
       title: 'Welcome to my portfolio',
       subtitle: `Hello and welcome! I'm thrilled to share my creative journey with you through this portfolio. Here you'll discover a curated collection of my professional work, showcasing my skills, experience, and passion for design.
-Browse through my projects to see how I approach challenges, solve problems, and deliver results that exceed expectations. Each case study provides insights into my creative process, technical abilities, and the impact of my solutions.
+Browse through my projects to see how I approach challenges. Each case study provides insights into my creative process, technical abilities, and the impact of my solutions.
 Beyond my work samples, you'll find information about my background, skills, and the values that drive my professional approach. I've included details about my education, career path, and areas of expertise to give you a comprehensive understanding of what I bring to the table.`
       ,
       type: 'stats',
