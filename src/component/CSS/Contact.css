@@ -50,7 +50,7 @@
 
 /* Figura contenitrice: prende tutta l’altezza disponibile */
 .icon-figure {
-  width: 50%;         /* occupa tutta la larghezza */
+  width: 65%;         /* occupa tutta la larghezza */
   margin: 0;          /* reset dei margini */
   overflow: hidden;   /* obbliga il taglio */
   align-items: center;

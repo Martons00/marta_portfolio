@@ -13,7 +13,7 @@ const Contact = () => (
     <div>
         <Container fluid className="contact-root">
             <Row>
-                <Col md={8} xs={12} style={{ paddingBottom: 'auto' }}>
+                <Col md={8} xs={12} style={{ paddingBottom: '1.5rem' }}>
                     <Row className='h-50 gx-4 contact-row'>
                         <Col className='contact-card d-flex flex-column justify-content-between'>
                             <div className="connect-top">
@@ -81,7 +81,7 @@ const Contact = () => (
                     </Row>
                 </Col>
                 <Col md={4} xs={12}>
-                    <Figure style={{paddingTop: '1rem'}} >
+                    <Figure style={{paddingTop: '1.5rem'}} >
                         <Figure.Image src={PhotoCV} alt="Contact" className="contact-image" />
                     </Figure>
                 </Col>
