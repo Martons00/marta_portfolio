@@ -18,7 +18,7 @@ const Contact = () => (
                         <Col className='contact-card d-flex flex-column justify-content-between'>
                             <div className="connect-top">
                                 <span className="connect-subtitle">Let's work together!</span>
-                                <h1 className="connect-title">Connect</h1>
+                                <h1 className="connect-title">Connect !</h1>
                             </div>
                             <div className="connect-info">
                                 <div>marta.spaccapietra@gmail.com</div>

@@ -14,13 +14,25 @@
     font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 18px;
-    border-bottom: 1px solid #ddd;
     padding-bottom: 8px;
     width: fit-content;
     align-items: center;
     color: #fff;
     width: 100%;
     text-align: center;
+}
+.program-description {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    width: fit-content;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    text-align: start;
+    justify-content: center;
 }
 
 .program-icons-list {
