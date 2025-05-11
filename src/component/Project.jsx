@@ -10,7 +10,7 @@ const assets = import.meta.glob('../assets/*/*.{png,jpg,jpeg,svg,gif,mp4}', {
 
 function Project() {
     const { id } = useParams();
-    const name = id === '01' ? 'Rei Co-op' : id === '02' ? 'InColors' : id === '03' ? 'Spacemotion' : id === '04' ? 'Trive' : id;
+    const name = id === '01' ? 'Rei Co-op' : id === '02' ? 'InColors' : id === '03' ? 'Spacemotion' : id === '04' ? 'Trive' : id === '05' ? 'Trive: Design Documentation' : id ;
 
 
     const assetList = Object.entries(assets)

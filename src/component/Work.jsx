@@ -12,6 +12,7 @@ const projects = [
     { id: '02', name: 'InColors', description: 'Education, Entertainment.', link: '02' },
     { id: '03', name: 'Space Motion', description: 'Education-Entertainment.', link: '03' },
     { id: '04', name: 'Trive', description: 'Ciclo', link: '04' },
+    { id: '05', name: 'Trive ', description: 'Design Documentation', link: '05' },
 ];
 
 const Work = () => {
