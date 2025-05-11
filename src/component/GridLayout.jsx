@@ -39,7 +39,7 @@ Beyond my work samples, you'll find information about my background, skills, and
     {
       id: '03',
       title: 'Space Motion',
-      subtitle: 'Education, Entertainment.',
+      subtitle: 'Education, Kids',
       type: 'work',
       image: '',
       fallback: 'https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_1280.jpg',
@@ -48,7 +48,7 @@ Beyond my work samples, you'll find information about my background, skills, and
     {
       id: '01-large',
       title: 'Rei Co-op',
-      subtitle: 'A personal portfolio to showcase my work.',
+      subtitle: 'Case Study, Redesign',
       type: 'work',
       image: '',
       fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
@@ -57,7 +57,7 @@ Beyond my work samples, you'll find information about my background, skills, and
     {
       id: '02',
       title: 'InColors',
-      subtitle: 'Education, Entertainment.',
+      subtitle: 'Education, Entertainment, Accesibility',
       type: 'work',
       image: '',
       fallback: 'https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_1280.jpg',
@@ -129,10 +129,8 @@ Beyond my work samples, you'll find information about my background, skills, and
     <Container fluid className="grid-layout">
       <Row className="g-3 gx-4 gy-4" >
         {projects.map((project, idx) => {
-          // Path coerente con la logica di Work.jsx
           const imgPath = `../assets/Copertine/${project.id}.png`;
           const imageModule = images[imgPath];
-          // Scegli immagine locale se esiste, altrimenti fallback esterno
           const imageSrc = imageModule ? imageModule.default : (project.fallback || project.image);
 
           return (

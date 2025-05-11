@@ -8,10 +8,10 @@ import Col from 'react-bootstrap/Col';
 const images = import.meta.glob('../assets/Copertine/*.{png,jpg,jpeg,svg,gif}', { eager: true });
 
 const projects = [
-    { id: '01', name: 'Rei Co-op', description: 'A personal portfolio to showcase my work.', link: '01' },
-    { id: '02', name: 'InColors', description: 'Education, Entertainment.', link: '02' },
-    { id: '03', name: 'Space Motion', description: 'Education-Entertainment.', link: '03' },
-    { id: '04', name: 'Trive', description: 'Ciclo', link: '04' },
+    { id: '01', name: 'Rei Co-op', description: 'Case Study, Redesign', link: '01' },
+    { id: '02', name: 'InColors', description: 'Education, Entertainment, Accesibility', link: '02' },
+    { id: '03', name: 'Space Motion', description: 'Education, Kid', link: '03' },
+    { id: '04', name: 'Trive', description: 'Health, Fitnetss', link: '04' },
     { id: '05', name: 'Trive ', description: 'Design Documentation', link: '05' },
 ];
 
@@ -27,7 +27,7 @@ const Work = () => {
                     const imageSrc = imageModule ? imageModule.default : '';
 
                     return (
-                        <Col key={project.id} xs={12} sm={6} md={6} lg={3} style={{ gap: '20px' }}>
+                        <Col key={project.id} xs={12} sm={6} md={6} lg={4} style={{ gap: '20px' }}>
                             <ProjectCard
                                 image={imageSrc}
                                 title={project.name}
