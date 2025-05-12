@@ -1,6 +1,6 @@
 import React from 'react';
 import './CSS/Work.css';
-import ProjectCard from './Card';
+import {ProjectCard} from './Card';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -17,7 +17,7 @@ const projects = [
 
 const Work = () => {
     return (
-        <div>
+        <div style={{ padding: '20px' }}>
             <h2>My Work</h2>
             <Container >
             <Row className="gx-4 gy-4">

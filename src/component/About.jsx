@@ -6,7 +6,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faBriefcase, faStar } from '@fortawesome/free-solid-svg-icons';
 import './CSS/About.css'; // Import your CSS file for styling
-import ProjectCard from './Card';
+import {ProjectCard} from './Card';
 import PhotoCV from '../assets/PhotoCV.jpg';
 
 const About = () => {

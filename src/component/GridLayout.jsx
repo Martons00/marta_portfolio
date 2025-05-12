@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import './CSS/GridLayout.css';
-import ProjectCard from './Card';
+import {ProjectCard,PreviewCard} from './Card';
 import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import backMOV from '../assets/backName.mp4';
 
 const images = import.meta.glob('../assets/Copertine/*.{png,jpg,jpeg,svg,gif}', { eager: true });
+
+const imagesJ = import.meta.glob('../assets/CopertineJ/*.{png,jpg,jpeg,svg,gif}', { eager: true });
 
 function GridLayout() {
   const [animate, setAnimate] = useState(false);
@@ -48,7 +50,7 @@ Beyond my work samples, you'll find information about my background, skills, and
     {
       id: '01-large',
       title: 'Rei Co-op',
-      subtitle: 'Case Study, Redesign',
+      subtitle: 'Case study, Redesign',
       type: 'work',
       image: '',
       fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
@@ -67,34 +69,34 @@ Beyond my work samples, you'll find information about my background, skills, and
       id: 'outline-02',
       title: 'My works',
       subtitle: 'A personal portfolio to showcase my work.',
-      type: 'stats',
-      image: '',
-      fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
+      type: 'preview',
       size: 'small'
-    },
+    }
+  ];
+
+  
+  const jornals = [
     {
       id: 'outline-01',
-      title: 'About Me',
-      subtitle: 'A personal portfolio to showcase my work.',
-      type: 'stats',
-      image: '',
-      fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
+      title: 'My Journal',
+      subtitle: 'A personal journal to showcase my passions.',
+      type: 'preview',
       size: 'm-small'
     },
     {
-      id: 'jornal',
-      title: 'Jornal',
-      subtitle: 'A personal portfolio to showcase my work.',
-      type: 'jornal',
+      id: '01',
+      title: 'Formula 1',
+      subtitle: '',
+      type: 'work',
       image: '',
       fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
       size: 's-small'
     },
     {
-      id: 'jornal',
-      title: 'Jornal',
-      subtitle: 'A personal portfolio to showcase my work.',
-      type: 'jornal',
+      id: '02',
+      title: 'Art',
+      subtitle: '',
+      type: 'work',
       image: '',
       fallback: 'https://cdn.pixabay.com/photo/2016/11/29/01/34/man-1866574_1280.jpg',
       size: 's-small'
@@ -173,19 +175,55 @@ Beyond my work samples, you'll find information about my background, skills, and
                   <div className="stat-item">{project.subtitle}</div>
                   <div className="stat-item">{project.description}</div>
                 </div>
-              ) : project.type === 'jornal' ? (
-                <Col style={{ height: "100%" }}>
-                  <Row className="stats-card" style={{ height: "50%", margin: "5px" }}>
-                    <div className="stat-item">{project.title}</div>
-                    <div className="stat-item">{project.subtitle}</div>
-                    <div className="stat-item">{project.description}</div>
-                  </Row>
-                  <Row className="stats-card" style={{ height: "50%", margin: "5px" }}>
-                    <div className="stat-item">{project.title}</div>
-                    <div className="stat-item">{project.subtitle}</div>
-                    <div className="stat-item">{project.description}</div>
-                  </Row>
-                </Col>
+              ) :  project.type === 'preview' ? (
+                  <PreviewCard
+                    title={project.title}
+                    subtitle={project.subtitle}
+                    isLinked={true}
+                    buttonUrl={'work'}
+                    buttonText={"Discover more"}
+                />
+              ) :(
+                <div className="about-card">
+                  <p>{project.content}</p>
+                </div>
+              )}
+            </Col>
+          );
+        })}
+
+        {jornals.map((project, idx) => {
+          const imgJPath = `../assets/CopertineJ/${project.id}.png`;
+          const imageJModule = imagesJ[imgJPath];
+          const imageJSrc = imageJModule ? imageJModule.default : (project.fallback || project.image);
+
+          return (
+            <Col
+              xs={12}
+              sm={12}
+              md={12}
+              lg={4}
+              key={project.id}
+              className={` ${project.type}   ${animate ? 'fade-in-up' : ''}`}
+              style={{ animationDelay: `${idx * 120}ms`, marginTop: '60px' }}
+            >
+              {project.type === 'work' ? (
+                <ProjectCard
+                  image={imageJSrc}
+                  title={project.title}
+                  subtitle={project.subtitle}
+                  isLinked={true}
+                  buttonUrl={'journal/' + project.id}
+                  buttonText={"Discover"}
+                />
+              ) : project.type === 'preview' ? (
+                  <PreviewCard
+                    title={project.title}
+                    subtitle={project.subtitle}
+                    isLinked={true}
+                    buttonUrl={'journal'}
+                    buttonText={"Discover more"}
+                />
               ) : (
                 <div className="about-card">
                   <p>{project.content}</p>
